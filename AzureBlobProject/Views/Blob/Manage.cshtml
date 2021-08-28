@@ -1,0 +1,32 @@
+﻿@model List<string>
+
+
+<div class= "container p-4 border">
+    <div class="row">
+        <div class="col-6">
+            <h3> Container Name - @Context.Request.Query["containerName"].ToString()</h3>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="AddFile" asp-controller="Blob" class="btn btn-success">Add Blob</a>
+        </div>
+    </div>
+    <div class="container pt-4">
+        @foreach (var item in Model)
+        {
+            <div class="row py-1">
+                <div class="col-6">
+                    <a asp-action="ViewFile" asp-controller="Blob" target="_blank" asp-route-name="@item">
+                        @item
+                    </a>
+
+                </div>
+                <div class="col-6">
+
+                    <a asp-action="DeleteFile" asp-controller="Blob" asp-route-name="@item" class="btn btn-danger">
+                        Delete
+                    </a>
+                </div>
+            </div>
+    }
+    </div>
+</div>
