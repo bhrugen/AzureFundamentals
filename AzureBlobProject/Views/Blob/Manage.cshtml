@@ -7,7 +7,7 @@
             <h3> Container Name - @Context.Request.Query["containerName"].ToString()</h3>
         </div>
         <div class="col-6 text-right">
-            <a asp-action="AddFile" asp-controller="Blob" class="btn btn-success">Add Blob</a>
+            <a asp-action="AddFile" asp-controller="Blob" asp-route-containerName=@Context.Request.Query["containerName"].ToString() class="btn btn-success">Add Blob</a>
         </div>
     </div>
     <div class="container pt-4">
