@@ -17,4 +17,29 @@ public class BlobController : Controller
         var blobsObj = await _blobService.GetAllBlobs(containerName);
         return View(blobsObj);
     }
+
+    [HttpGet]
+    public IActionResult AddFile()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddFile(IFormFile file)
+    {
+        if (file == null || file.Length < 1) return View();
+
+        //file name - xps_img2.png 
+        //new name - xps_img2_GUIDHERE.png
+        var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
+
+        var result = await _blobService.UploadBlob(fileName, file, "images");
+
+        if(result)
+            return RedirectToAction("Index", "Container");
+
+        return View();
+    }
+
+
 }
