@@ -1,5 +1,6 @@
 
 using Azure.Storage.Blobs;
+using AzureBlobProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton(u => new BlobServiceClient(
         builder.Configuration.GetValue<string>("BlobConnection")
     ));
-
+builder.Services.AddSingleton<IContainerService, ContainerService>();
 
 var app = builder.Build();
 
