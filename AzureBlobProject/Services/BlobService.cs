@@ -64,6 +64,10 @@ public class BlobService : IBlobService
 
         var result = await blobClient.UploadAsync(file.OpenReadStream(), httpHeaders, metadata);
 
+        //metadata.Remove("title");
+
+        //await blobClient.SetMetadataAsync(metadata);
+
         if (result != null)
         {
             return true;
