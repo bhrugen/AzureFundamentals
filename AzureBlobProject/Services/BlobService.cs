@@ -36,6 +36,33 @@ public class BlobService : IBlobService
         return blobString;
     }
 
+    public async Task<List<Blob>> GetAllBlobsWithUri(string containerName)
+    {
+        BlobContainerClient blobContainerClient = _blobClient.GetBlobContainerClient(containerName);
+        var blobs = blobContainerClient.GetBlobsAsync();
+        var blobList = new List<Blob>();
+        await foreach (var item in blobs)
+        {
+            var blobClient = blobContainerClient.GetBlobClient(item.Name);
+            Blob blobIndividual = new()
+            {
+                Uri = blobClient.Uri.AbsoluteUri
+            };
+            BlobProperties properties = await blobClient.GetPropertiesAsync();
+            if (properties.Metadata.ContainsKey("title"))
+            {
+                blobIndividual.Title = properties.Metadata["title"];
+            }
+            if (properties.Metadata.ContainsKey("comment"))
+            {
+                blobIndividual.Comment = properties.Metadata["comment"];
+            }
+            blobList.Add(blobIndividual);
+        }
+
+        return blobList;
+    }
+
     public async Task<string> GetBlob(string name, string containerName)
     {
         BlobContainerClient blobContainerClient = _blobClient.GetBlobContainerClient(containerName);
