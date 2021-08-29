@@ -1,6 +1,7 @@
 ﻿
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using AzureBlobProject.Models;
 
 namespace AzureBlobProject.Services;
 public class BlobService : IBlobService
@@ -44,7 +45,7 @@ public class BlobService : IBlobService
         return blobClient.Uri.AbsoluteUri;
     }
 
-    public async Task<bool> UploadBlob(string name, IFormFile file, string containerName)
+    public async Task<bool> UploadBlob(string name, IFormFile file, string containerName, Blob blob)
     {
         BlobContainerClient blobContainerClient = _blobClient.GetBlobContainerClient(containerName);
 
@@ -55,7 +56,13 @@ public class BlobService : IBlobService
             ContentType = file.ContentType
         };
 
-        var result = await blobClient.UploadAsync(file.OpenReadStream(), httpHeaders);
+        IDictionary<string, string> metadata =
+         new Dictionary<string, string>();
+
+        metadata.Add("title", blob.Title);
+        metadata["comment"] = blob.Comment;
+
+        var result = await blobClient.UploadAsync(file.OpenReadStream(), httpHeaders, metadata);
 
         if (result != null)
         {
