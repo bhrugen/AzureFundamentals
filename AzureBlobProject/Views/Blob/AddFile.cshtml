@@ -1,4 +1,6 @@
-﻿<form method="post" asp-action="AddFile" asp-controller="Blob" enctype="multipart/form-data">
+﻿@model Blob
+
+<form method="post" asp-action="AddFile" asp-controller="Blob" enctype="multipart/form-data">
     <div class="container">
         <h3>Container Name - @Context.Request.Query["containerName"].ToString()</h3>
 
@@ -7,12 +9,29 @@
         <div class="row border p-2">
             <div class="col-12 pb-2"><h4 class="text-primary">Add Item to Blob :</h4></div>
 
-            <div class="form-group col-9">
+            <div class="col-2">
+                Title:
+			</div>
+            <div class="col-4">
+                <input asp-for="Title" class="form-control pt-1" />
+			</div>
+            <div class="col-2">
+                Comments:
+			</div>
+            <div class="col-4">
+                <input asp-for="Comment" class="form-control pt-1" />
+			</div>
+             <div class="col-2 pt-3">
+                Upload Blob:
+			</div>
+            <div class="col-4 pt-3">
                 <input type="file" class="form-control pt-1" name="file" />
+			</div>
+            <div class="col-2 pt-3">
             </div>
-            <div class="form-group col-3">
+            <div class="col-4 pt-3">
                 <button type="submit" class="btn btn-success form-control">Add</button>
-            </div>
+			</div>
         </div>
     </div>
 </form>
