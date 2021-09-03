@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobProject", "AzureBlobProject\AzureBlobProject.csproj", "{A26E5732-2E6C-4D26-960D-C85BEF325738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionTangyWeb", "AzureFunctionTangyWeb\AzureFunctionTangyWeb.csproj", "{342ED00B-7E9B-4757-A48E-52E947D21A9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunctionTangyWeb", "AzureFunctionTangyWeb\AzureFunctionTangyWeb.csproj", "{342ED00B-7E9B-4757-A48E-52E947D21A9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureBlobExample", "AzureBlobExample", "{2B877CFC-B058-4A1A-88A1-076A7B805D6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFuncationExample", "AzureFuncationExample", "{1874058B-2854-4720-8264-950C39082884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTangyFunc", "AzureTangyFunc\AzureTangyFunc.csproj", "{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTangyFunc", "AzureTangyFunc\AzureTangyFunc.csproj", "{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,6 @@ Global
 		{342ED00B-7E9B-4757-A48E-52E947D21A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{342ED00B-7E9B-4757-A48E-52E947D21A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{342ED00B-7E9B-4757-A48E-52E947D21A9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C2E2A0F-BEA6-4FCF-BFD4-94352B2C238F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C2E2A0F-BEA6-4FCF-BFD4-94352B2C238F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C2E2A0F-BEA6-4FCF-BFD4-94352B2C238F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C2E2A0F-BEA6-4FCF-BFD4-94352B2C238F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,7 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A26E5732-2E6C-4D26-960D-C85BEF325738} = {2B877CFC-B058-4A1A-88A1-076A7B805D6A}
 		{342ED00B-7E9B-4757-A48E-52E947D21A9C} = {1874058B-2854-4720-8264-950C39082884}
-		{6C2E2A0F-BEA6-4FCF-BFD4-94352B2C238F} = {1874058B-2854-4720-8264-950C39082884}
+		{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC} = {1874058B-2854-4720-8264-950C39082884}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF22B1C9-0AA8-4E98-B212-E86107423EFE}
