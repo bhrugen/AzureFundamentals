@@ -4,6 +4,7 @@
     "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=azuredotnetmastery;AccountKey=dEnt4cnUh3nHyfPhL7F3Bw+ZAbpN7g34r5YPxI+BOFqscvcLSsGh+CckIBkMr3fqd/KmoNz/vCDaHqIyqdl77w==;EndpointSuffix=core.windows.net",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
     //"AzureSqlDatabase": "Server=tcp:dotnetmasterysqlserver.database.windows.net,1433;Initial Catalog=dotnetmastery-azureSQL;Persist Security Info=False;User ID=admin-sql;Password=DotnetMastery1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
-    "AzureSqlDatabase": "Server=(localdb)\\mssqllocaldb;Database=AzureDotNetMasterySQL;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "AzureSqlDatabase": "Server=(localdb)\\mssqllocaldb;Database=AzureDotNetMasterySQL;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "CustomSendGridKeyAppSettingName": "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"
   }
 }
