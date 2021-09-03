@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace AzureTangyFunc
 {
-    public static class Function1
+    public static class OnSalesUploadWriteToQueue
     {
-        [FunctionName("Function1")]
+        [FunctionName("OnSalesUploadWriteToQueue")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
