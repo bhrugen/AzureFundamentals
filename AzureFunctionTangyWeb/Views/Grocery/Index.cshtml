@@ -1,0 +1,58 @@
+﻿@model IEnumerable<GroceryItem>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br /><br />
+<div class=" backgroundWhite">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info"> Grocery List</h2>
+        </div>
+        <div class="col-6 text-right">
+           <a asp-action="Create" class="btn btn-info"><i class="fas fa-plus"></i> &nbsp;  Create New </a>
+        </div>
+    </div>
+    <br />
+    <div>
+        @if (Model!=null && Model.Count() > 0)
+        {
+        <table class="table table-striped ">
+            <tr class="table-secondary">
+                <th>
+                    @Html.DisplayNameFor(m => m.Name)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-Id="@item.Id">
+                                Edit
+                            </a>
+
+                            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-Id="@item.Id">
+                                Delete
+                            </a>
+                        </div>
+                    </td>
+                    
+                </tr>
+            }
+        </table>
+        }
+        else
+        {
+            <p>No category exists...</p>
+        }
+    </div>
+</div>
+
