@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using AzureTangyFunc.Data;
 using AzureTangyFunc.Models;
+using System.Linq;
 
 namespace AzureTangyFunc
 {

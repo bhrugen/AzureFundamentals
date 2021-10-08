@@ -1,6 +1,10 @@
 ﻿using AzureBlobProject.Models;
 using AzureBlobProject.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace AzureBlobProject.Controllers;
 public class BlobController : Controller

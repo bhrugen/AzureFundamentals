@@ -1,9 +1,12 @@
 ﻿
 using AzureBlobProject.Models;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AzureBlobProject.Services;
 
-public interface IBlobService
+public interface IBlobService 
 {
     Task<string> GetBlob(string name,string containerName);
     Task<List<string>> GetAllBlobs(string containerName);
