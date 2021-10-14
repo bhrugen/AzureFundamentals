@@ -34,7 +34,10 @@ namespace RedisCache.Controllers
             else
             {
                 categoryList = _db.Category.ToList();
-                _cache.SetString("categoryList", JsonConvert.SerializeObject(categoryList));
+                DistributedCacheEntryOptions options = new();
+                options.SetAbsoluteExpiration(new TimeSpan(0, 0, 30));
+
+                _cache.SetString("categoryList", JsonConvert.SerializeObject(categoryList),options);
             }
             return View(categoryList);
         }
