@@ -13,9 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFuncationExample", "Az
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTangyFunc", "AzureTangyFunc\AzureTangyFunc.csproj", "{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureLogicAppExample", "AzureLogicAppExample", "{4EAA87FB-1D5C-4168-A139-974C19BF8F4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureRedisCache", "AzureRedisCache", "{B15F30FF-BF74-4091-ADD1-9B46BFD5D752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisCache", "RedisCache\RedisCache.csproj", "{2F38FEA1-304E-4A36-8DDA-3F4DF3999089}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F38FEA1-304E-4A36-8DDA-3F4DF3999089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F38FEA1-304E-4A36-8DDA-3F4DF3999089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F38FEA1-304E-4A36-8DDA-3F4DF3999089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F38FEA1-304E-4A36-8DDA-3F4DF3999089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{342ED00B-7E9B-4757-A48E-52E947D21A9C} = {1874058B-2854-4720-8264-950C39082884}
 		{D6F0207B-5937-4ACA-832D-9DC92BFCC4CC} = {1874058B-2854-4720-8264-950C39082884}
 		{979211D7-3B5B-40E5-AA2B-09A63CDA7BA0} = {4EAA87FB-1D5C-4168-A139-974C19BF8F4C}
+		{2F38FEA1-304E-4A36-8DDA-3F4DF3999089} = {B15F30FF-BF74-4091-ADD1-9B46BFD5D752}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF22B1C9-0AA8-4E98-B212-E86107423EFE}
